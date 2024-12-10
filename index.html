@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+</head>
+<body>
+
+    <h1>Product Page</h1>
+    <p>Product ID: <span id="product-id"></span></p>
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.pathname.split('/').pop());
+
+// Extract the product ID (last segment of the URL)
+const productId = window.location.pathname.split('/').pop();
+
+// Display the product ID in the HTML
+document.getElementById('product-id').textContent = productId;
+        </script>    
+</body>
+</html>
